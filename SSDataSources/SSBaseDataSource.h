@@ -157,7 +157,7 @@ typedef void (^SSTableCellDeletionBlock)
  * 
  * Assigning this property will also set the receiver as the tableView's `dataSource`
  */
-@property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 /**
  * Optional animation to use when updating the table.
@@ -190,7 +190,7 @@ typedef void (^SSTableCellDeletionBlock)
  * 
  * Assigning this property will set the receiver as the collectionView's `dataSource`
  */
-@property (nonatomic, weak) UICollectionView *collectionView;
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 
 /**
  * The base class to use to instantiate new supplementary collection view elements.
