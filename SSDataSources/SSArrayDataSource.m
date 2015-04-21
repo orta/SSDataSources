@@ -62,6 +62,13 @@ static void *SSArrayKeyPathDataSourceContext = &SSArrayKeyPathDataSourceContext;
 
 @implementation SSArrayDataSource
 
+- (void)awakeFromNib
+{
+    self.target = [[SSArrayDataSourceItemsContainer alloc] initWithItems:nil];
+    self.keyPath = @"items";
+    [self registerKVO];
+}
+
 - (instancetype)initWithItems:(NSArray *)anItems {
     return [self initWithTarget:[[SSArrayDataSourceItemsContainer alloc] initWithItems:anItems]
                         keyPath:@"items"];
